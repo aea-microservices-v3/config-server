@@ -25,7 +25,19 @@ spring:
         uri: lb://address-service
         predicates:
         - Path=/address/**
-      - id: address-service
+      - id: order-details-processor
         uri: lb://order-details-processor
         predicates:
         - Path=/order-details/**
+      - id: order-service
+        uri: lb://order-service
+        predicates:
+        - Path=/order/**
+      - id: aggregator-service
+        uri: lb://aggregator-service
+        predicates:
+        - Path=/aggregate/**
+      - id: event-details-fetcher
+        uri: lb://event-details-fetcher
+        predicates:
+        - Path=/event-details/**

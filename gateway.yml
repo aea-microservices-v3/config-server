@@ -25,4 +25,4 @@ spring:
       - id: address-service
         uri: lb://address-service
         predicates:
-        - Path=/currency-conversion-feign/**
+        - Path=/address-service/**

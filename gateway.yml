@@ -25,3 +25,7 @@ spring:
         uri: lb://address-service
         predicates:
         - Path=/address/**
+      - id: address-service
+        uri: lb://order-details-processor
+        predicates:
+        - Path=/order-details/**

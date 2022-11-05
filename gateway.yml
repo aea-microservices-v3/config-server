@@ -25,4 +25,4 @@ spring:
       - id: address-service
         uri: lb://address-service
         predicates:
-        - Path=/address-service/**
+        - Path=/address/**
